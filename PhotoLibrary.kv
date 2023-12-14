@@ -1,0 +1,44 @@
+Display
+
+<Display>:
+    BoxLayout:
+        padding: "15dp"
+        orientation: "vertical"
+        GridLayout:
+            rows: 4
+            TextInput:
+                id: name
+                text: "Enter image name (and the format)"
+                size_hint: .5, 3
+            Button:
+                text: "Load Image"
+                size_hint: .5, 3
+                on_release: pic.source = name.text
+            Button:
+                text: "Black and White"
+                size_hint: .5, 3
+                on_release: root.oldtimey()
+            Button:
+                text: "Inverse"
+                size_hint: .5, 3
+                on_release: root.inverse()
+            Button:
+                text: "Line Drawing"
+                size_hint: .5, 3
+                on_release: root.linedrawing()
+            Button:
+                text: "Pointilism"
+                size_hint: .5, 3
+                on_release: root.pointilism()
+            Button:
+                text: "Sepia"
+                size_hint: .5, 3
+                on_release: root.sepia()
+            Button:
+                text: "Pixelate (BROKEN)"
+                size_hint: .5, 3
+                #on_release: root.pixelate()
+        Image:
+            id: pic
+            source: ""
+            size_hint: 1, 5
