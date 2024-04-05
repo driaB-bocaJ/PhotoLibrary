@@ -1,5 +1,6 @@
 import random
 
+
 from PIL import Image
 from PIL.ImageDraw import ImageDraw
 from kivy.app import App
